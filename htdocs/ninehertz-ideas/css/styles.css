@@ -1,0 +1,256 @@
+body{}/* v2.0 | 20110126
+  http://meyerweb.com/eric/tools/css/reset/
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	color:#494949;
+	font:14px/1.4 'Droid Sans', sans-serif;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1 {
+    font-family: 'Alfa Slab One', 'rockwell', sans-serif;
+    font-size:72px;
+    font-weight:normal;
+
+    border-bottom: 1px solid #494949;
+    box-shadow: 0 1px 0 0 #CCC;
+}
+h1 a {
+    color:#494949;
+    text-decoration:none;
+    text-shadow: 1px 1px 1px #CCC;
+    display:block;
+}
+h2{
+    font-size:20px;
+	font-family:'Droid Serif', serif;
+}
+ol, ul {
+    list-style:none;
+}
+strong {
+	font-weight:bold;
+}
+
+
+header {
+    margin:0 0 14px 0;
+	line-height:1;
+}
+header ul {
+	margin:8px 0 0 0;
+}
+header li {
+    display:inline;
+    font-size:20px;
+    margin:0 10px 0 0;
+	font-family:'Droid Serif', serif;;
+}
+#login {
+    position:absolute;
+    top:0;
+    right:0;
+    
+}
+#login a {
+	text-decoration:none;
+	background: #494949;
+    color:#FFF;
+    padding:4px;
+	text-align:center;
+	width:50px;
+	display:block;
+	float:right;
+	position:absolute;
+	top:0;
+	right:0;
+}
+.login-menu {
+	width:300px;
+	height:200px;
+	background:#FFF;
+	background:rgba(255,255,255,0.8);
+	border-bottom:1px solid #494949;
+	position:absolute;
+	top:22px;
+	right:0;
+	display:none;
+}
+
+#login.logged-in #login-form, #login.logged-in .login-link {
+	display:none;
+}
+
+#login #account-menu, #login .login-link.account {
+	display:none;
+}
+#login.logged-in #ccount-menu, #login.logged-in .login-link.account {
+	display:block;
+}
+
+#wrapper {
+    width:100%;
+    max-width:1280px;
+    overflow:hidden;
+}
+
+.block-100 {
+    width:100%;
+}
+.block-60 {
+    width:60%;
+    float:left;
+}
+.block-50 {
+    width:50%;
+    float:left;
+}
+.block-40 {
+    width:40%;
+    float:left;
+}
+
+#featured {
+    margin:0 0 16px 0;
+}
+#featured img {
+    width:100%;
+    max-width:100%;
+}
+
+#live-dates, #recent-posts, #news {
+    padding:6px 12px;
+	background:#EFEFEF;
+	background:rgba(239,239,239,0.3);
+	margin:0 0 16px 16px;
+}
+
+
+#live-dates a, #recent-posts a, #news a {
+	padding:6px 0;
+	display:block;
+	text-decoration:none;
+	color:#494949;
+}
+
+#articles img {
+  width:100%;
+    max-width:100%;
+    opacity:0.7; 
+	-webkit-transition:all .5s;
+	transition:all .5s;
+}
+#articles li:hover img {
+	opacity:1;
+}
+#articles  li {
+    width:25%;
+    float:left;
+	line-height:0;
+   	background:#000;
+	position:relative;
+	overflow:hidden;
+}
+#articles a {
+	display:block;
+	color:#000;
+}
+#articles div {
+
+	width:92%;
+	
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	background:#FFF;
+	background:rgba(255,255,255,0.8);
+	line-height:1.2;
+	padding:6px 5%;
+	display:none;
+}
+
+
+#articles-sidebar li {
+	width:25%;
+	float:left;
+}
+#articles-sidebar img {
+	width:100%;
+}
+#articles-sidebar li div {
+	display:none;
+}
+
+
+
+
+
+footer {
+    background:#494949;
+    color:#FFF;
+    width:100%;
+    padding:8px 0;
+    clear:both;
+    margin:32px 0 0 0;
+	font-size:10px;
+	text-align:right;
+}
+
+@media all and (max-width:1024px) {
+   .block-50.sub {
+       width:100%;
+       float:none;
+   }
+	#articles  li {
+       width:50%;
+   }
+}
+@media all and (max-width:480px) {
+	.block-50, .block-60, .block-40 {
+       width:100%;
+       float:none;
+   }
+	#articles  li {
+       width:50%;
+   }
+	#articles div {
+		display:block;
+	}
+}

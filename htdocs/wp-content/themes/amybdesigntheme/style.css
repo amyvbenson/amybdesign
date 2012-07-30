@@ -1,0 +1,39 @@
+/*
+Theme Name: amyb design
+Version: 2.0
+Author: Amy Benson
+*/
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, header, section, aside, footer, button {margin: 0; padding: 0; border: 0; list-style: none;}
+
+body {background-color:#f9f9f9; color:#000000; font-size:95%; font-family: 'Droid Sans', arial, serif;}
+
+.clear {clear:both;}
+a:link, a:visited {color:#000000; text-decoration:none;}
+a:hover, a:focus, a:active {text-decoration:underline;}
+
+header,section,footer {display:block; width:978px; margin:0 auto;}
+
+header {height:350px; }
+h1 {font-family: 'Lobster', arial, serif; width:480px; float:left; font-size:200px; line-height:80px; padding:70px 0 0 20px; text-shadow: 4px 4px 2px #cdcdcd;}
+h1 span {font-size:100px;}
+
+article h1 {font-size:2em; line-height:120%; width:auto; float:none; padding:10px;}
+
+header div {width:438px; float:left; margin:50px 20px 0 20px;}
+header p {font-size:1.8em; line-height:130%;}
+p#contact {margin:20px 0 0 0; background-color:#ededed; font-size:1em; padding:10px; width:408px; line-height:150%;}
+
+section header {height:auto; margin:0 0 10px 0;}
+h2 {color:#444343; font-family: 'Lobster', arial, serif; font-size:3em; padding:0 20px; }
+
+article {width:437px; height:29em; border:1px solid #b6b6b6; float:left; margin:0 20px 40px 20px; background-color:#ffffff;}
+article p {padding:0.2em 0.4em; font-size:0.95em; line-height:130%; color:#444343;}
+article p strong {font-size:1.1em;}
+
+article.full {width:600px; height:auto;}
+
+.syntaxhighlighter {margin:0 20px;}
+
+footer p {color:#444343; font-size:0.8em;}
