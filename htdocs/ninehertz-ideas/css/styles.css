@@ -48,8 +48,7 @@ table {
 }
 
 h1 {
-    font-family: 'Alfa Slab One', 'rockwell', sans-serif;
-    font-size:72px;
+    font:72px/1 'Alfa Slab One', 'rockwell', sans-serif;
     font-weight:normal;
 
     border-bottom: 1px solid #494949;
@@ -62,8 +61,7 @@ h1 a {
     display:block;
 }
 h2{
-    font-size:20px;
-	font-family:'Droid Serif', serif;
+	font:20px / 1.3 'Droid Serif', serif;
 }
 ol, ul {
     list-style:none;
@@ -137,7 +135,7 @@ header li {
 .block-100 {
     width:100%;
 }
-.block-60, .block-50, .block-50.sub, .block-40 {
+.block-60, .block-50, .block-50.sub, .block-40, .block-33 {
     width:100%;
 }
 @media all and (min-width:481px) {
@@ -151,6 +149,10 @@ header li {
 	}
 	.block-40 {
 	    width:40%;
+	    float:left;
+	}
+	.block-33 {
+	    width:33.3333333%;
 	    float:left;
 	}
 }
@@ -214,7 +216,7 @@ header li {
 	display:block;
 	color:#000;
 }
-#articles div {
+#articles div, #articles-sidebar div {
 	width:92%;
 	overflow:hidden;
 	position:absolute;
@@ -225,35 +227,50 @@ header li {
 	padding:6px 5%;
 }
 @media all and (min-width:480px) {
-	#articles div {
+	#articles div, #articles-sidebar div {
 		display:none;
 	}
 }
 
+#articles-sidebar {
+	overflow:auto;
+	padding:0 0 12px 12px;
+}
 #articles-sidebar li {
 	width:25%;
 	float:left;
+	line-height:0;
+	position:relative;
+	overflow:hidden;
 }
 #articles-sidebar img {
 	width:100%;
 }
-#articles-sidebar li div {
-	display:none;
-}
 
+
+
+/* Forum */
+#forum h2 {
+	padding:16px 0;
+	margin:0 16px 16px 0;
+	border-bottom:2px solid #494949;
+	font-size:32px;
+	background:#e3e3e3;
+    background:rgba(227,227,227,0.4);
+}
 #forum ol {
     margin:0 16px 0 0;
 }
 #forum ol >li {
-    background:#e3e3e3;
-    background:rgba(227,227,227,0.4);
-
-    padding:8px;
+    border-bottom:1px solid #ccc;
+    padding:16px 8px;
+	transition:all 0.5s;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
 }
-#forum ol >li:nth-child(odd) {
+#forum ol >li:nth-child(even) {
     background:#efefef;
-    background:rgba(239,239,239,0.4);
-
+    background:rgba(239,239,239,0.3);
 }
 
 #forum ol >li:hover {
@@ -272,11 +289,12 @@ header li {
 #forum .info {
     font-size:12px;
 }
-#forum  .overview {
-
-
+.users-online {
+	padding:16px 8px;
 }
 
+
+/* Footer */
 footer {
     background:#494949;
     color:#FFF;
@@ -285,5 +303,9 @@ footer {
     clear:both;
     margin:32px 0 0 0;
 	font-size:10px;
+}
+.copyright {
+	clear:both;
 	text-align:right;
+	width:100%;
 }

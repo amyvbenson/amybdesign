@@ -7,7 +7,7 @@ $(document).ready(function(){
 	});
 	
 	//homepage cover overlays
-	$('#articles li').hover(function(){
+	$('#articles li, #articles-sidebar li').hover(function(){
 		$(this).find('div').slideToggle();
 	});
 	
