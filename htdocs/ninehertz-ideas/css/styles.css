@@ -27,6 +27,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	color:#494949;
 	font:14px/1.4 'Droid Sans', sans-serif;
@@ -132,22 +133,34 @@ header li {
     max-width:1500px;
     overflow:hidden;
 }
-
+ /* Layout blocks */
 .block-100 {
     width:100%;
 }
-.block-60 {
-    width:60%;
-    float:left;
+.block-60, .block-50, .block-50.sub, .block-40 {
+    width:100%;
 }
-.block-50 {
-    width:50%;
-    float:left;
+@media all and (min-width:481px) {
+	.block-60 {
+	    width:60%;
+	    float:left;
+	}
+	.block-50 {
+	    width:50%;
+	    float:left;
+	}
+	.block-40 {
+	    width:40%;
+	    float:left;
+	}
 }
-.block-40 {
-    width:40%;
-    float:left;
+@media all and (min-width:1024px) {
+   .block-50.sub {
+       width:50%;
+       float:left;
+   }
 }
+
 
 #featured {
     margin:0 0 16px 0;
@@ -183,21 +196,26 @@ header li {
 	opacity:1;
 }
 #articles  li {
-    width:25%;
+    width:50%;
     float:left;
 	line-height:0;
    	background:#000;
 	position:relative;
 	overflow:hidden;
 }
+@media all and (min-width:1024px) {
+	#articles  li {
+   		width:25%;
+	}
+}
+
+
 #articles a {
 	display:block;
 	color:#000;
 }
 #articles div {
-
 	width:92%;
-
 	overflow:hidden;
 	position:absolute;
 	top:0;
@@ -205,9 +223,12 @@ header li {
 	background:rgba(255,255,255,0.8);
 	line-height:1.2;
 	padding:6px 5%;
-	display:none;
 }
-
+@media all and (min-width:480px) {
+	#articles div {
+		display:none;
+	}
+}
 
 #articles-sidebar li {
 	width:25%;
@@ -265,26 +286,4 @@ footer {
     margin:32px 0 0 0;
 	font-size:10px;
 	text-align:right;
-}
-
-@media all and (max-width:1024px) {
-   .block-50.sub {
-       width:100%;
-       float:none;
-   }
-	#articles  li {
-       width:50%;
-   }
-}
-@media screen and (max-device-width:480px) {
-	.block-50, .block-60, .block-40 {
-       width:100%;
-       float:none;
-   }
-	#articles  li {
-       width:50%;
-   }
-	#articles div {
-		display:block;
-	}
 }
